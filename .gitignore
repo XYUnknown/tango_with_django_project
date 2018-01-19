@@ -1,0 +1,12 @@
+# ignore .sqlite3
+*.sqlite3
+
+# ignore .DS_Store
+*.DS_Store
+
+# ignore binary files 
+__pycache__/
+
+# ignore external source file
+.idea/
+*.xml
