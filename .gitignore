@@ -14,3 +14,6 @@ __pycache__/
 # ignore media files
 images/
 media/
+
+# ignore auto generated scripts
+migrations/
