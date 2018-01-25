@@ -12,8 +12,10 @@ __pycache__/
 *.xml
 
 # ignore media files
-images/
-media/
+# ignoring media files will cause some problems passing test cases, 
+# therefore it is not a good idea to ignore them
+# images/
+# media/
 
 # ignore auto generated scripts
 migrations/
