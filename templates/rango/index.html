@@ -8,7 +8,11 @@
 {% block body_block %}
     <h1>Rango says... </h1>
     <div>
-        <p>hey there partner!</p>
+        {% if user.is_authenticated %}
+            howdy {{ user.username }}
+        {% else %}
+            <p>hey there partner!</p>
+        {% endif %}
     </div>
 
     <div>
@@ -27,11 +31,19 @@
     <div>
         <h2> Most Viewed Pages</h2>
         {% if pages %}
-            <ul>
-                {% for page in pages %}
-                    <li><a href="{{ page.url }}"> {{ page.title }} </a></li>
-                {% endfor %}
-            </ul>
+            {% if user.is_authenticated %}
+                <ul>
+                    {% for page in pages %}
+                        <li><a href="{{ page.url }}"> {{ page.title }} </a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <ul>
+                    {% for page in pages %}
+                        <li>{{ page.title }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         {% else %}
             <strong>There are no pages present.</strong>
         {% endif %}
