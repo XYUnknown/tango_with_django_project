@@ -49,6 +49,11 @@
         {% endif %}
     </div>
     <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango"/>
+    {% if visits %}
+        <p> You visited Rango visits: {{ visits }} times!</p>
+    {% else %}
+        <p> No cookies found QAQ </p>>
+    {% endif %}
 {% endblock %}
 
 <!-- Code Pre C8>

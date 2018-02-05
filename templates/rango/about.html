@@ -8,7 +8,13 @@
 {% block body_block %}
     <h1>About Rango</h1>
     <p>This tutorial has been put together by Yuki.</p>
+    <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" /><br/>
     <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of cat"/>
+    {% if visits %}
+        <p> You visited Rango visits: {{ visits }} times!</p>
+    {% else %}
+        <p> No cookies found QAQ </p>>
+    {% endif %}
 {% endblock %}
 
 <!--- Code Pre C8>
