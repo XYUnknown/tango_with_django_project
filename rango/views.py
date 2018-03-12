@@ -86,7 +86,7 @@ def add_page(request, category_name_slug):
     context_dict = {'form': form, 'category': category, }
     return render(request, 'rango/add_page.html', context_dict)
 
-
+'''
 def register(request):
     # True when registration succeeds
     registered = False
@@ -115,7 +115,9 @@ def register(request):
                   'rango/register.html',
                   {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
 
+'''
 
+'''
 # User login
 def user_login(request):
     if request.method == 'POST':
@@ -135,7 +137,7 @@ def user_login(request):
             # return HttpResponse("Invalid login details supplied.")
     else:
         return render(request, 'rango/login.html', {})
-
+'''
 
 # Restriction
 def some_view(request):
@@ -149,13 +151,13 @@ def some_view(request):
 def restricted(request):
     return render(request, 'rango/restricted.html', {})
 
-
+'''
 # Log out
 @login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
-
+'''
 
 # Helper function
 def get_server_side_cookie(request, cookie, default_val=None):
