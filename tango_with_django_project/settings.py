@@ -149,7 +149,7 @@ PASSWORD_HASHERS = (
 REGISTRATION_OPEN = True
 
 # One-week activation window
-ACCOUNT_ACTIVATION_DAY = 7
+ACCOUNT_ACTIVATION_DAYS = 7
 
 # True - user will be auto logged in
 REGISTRATION_AUTO_LOGIN = True
@@ -161,3 +161,5 @@ LOGIN_REDIRECT_URL = '/rango/'
 # and are trying to access pages requiring authentication
 # Redirect any user not logged in to the specific url
 LOGIN_URL = '/accounts/login/'
+
+REGISTRATION_FORM = 'rango.forms.UserRegistrationForm'

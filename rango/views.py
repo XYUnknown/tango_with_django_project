@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 # import the Category model
 from rango.models import Category
 from rango.models import Page
-from rango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
+from rango.forms import CategoryForm, PageForm #UserForm, UserProfileForm
 from datetime import datetime
 
 
