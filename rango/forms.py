@@ -47,12 +47,9 @@ class UserProfileForm(forms.ModelForm):
 '''
 
 
-class TempRegistrationForm(RegistrationFormUniqueEmail):
-    website = forms.URLField(required=False)
-    picture = forms.ImageField(required=False, allow_empty_file=True)
+class UserRegistrationForm(RegistrationFormUniqueEmail, RegistrationFormTermsOfService):
+    website = forms.URLField(max_length=200, required=True)
+    picture = forms.ImageField(required=True)
 
-
-class UserRegistrationForm(TempRegistrationForm, RegistrationFormTermsOfService):
-    pass
 
 
