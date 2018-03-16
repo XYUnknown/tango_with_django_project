@@ -47,7 +47,7 @@ class UserProfileForm(forms.ModelForm):
 '''
 
 
-class UserRegistrationForm(RegistrationFormUniqueEmail, RegistrationFormTermsOfService):
+class UserRegistrationForm(RegistrationFormTermsOfService, RegistrationFormUniqueEmail):
     website = forms.URLField(max_length=200, required=True)
     picture = forms.ImageField(required=True)
 

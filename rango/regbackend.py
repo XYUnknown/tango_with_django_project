@@ -13,6 +13,7 @@ class MyRegistrationView(RegistrationView):
         user_profile = UserProfile()
         user_profile.user = new_user
         if form.is_valid():
+            print("valid")
             user_profile.website = form.cleaned_data['website']
             print(user_profile.website)
             user_profile.picture = form.cleaned_data['picture']
